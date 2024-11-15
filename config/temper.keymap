@@ -14,8 +14,6 @@
 #define SYM 2
 #define FUN 3
 
-&sk { quick-release; };
-
 &lt {
     flavor = "hold-preferred";
     quick-tap-ms = <180>;
@@ -61,16 +59,6 @@
             flavor = "balanced";
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 10 20 21 1 11 12 2 3 4 24 14 13 23 22 30 31 32 33 34 35 25 26 28 27 29 9 8 7 6 5 15>;
-        };
-
-        mo_tog: mo_tog {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MO_TOG";
-            bindings = <&mo>, <&tog>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <180>;
         };
     };
 
@@ -158,6 +146,8 @@
   &trans   &trans   &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
                     &trans  &trans  &trans    &trans  &trans  &trans
             >;
+
+            label = "FUN";
         };
 
         sys {
@@ -177,7 +167,7 @@
 
         bt {
             if-layers = <1 2>;
-            then-layer = <2>;
+            then-layer = <4>;
         };
     };
 };
